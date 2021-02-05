@@ -22,16 +22,19 @@ print("Vocabulary size:", vocab_size)
 
 embeddings = torch.zeros([vocab_size, embed_dim], dtype=torch.float)
 vocab = {}
+vocab_list = []
 
 for word_num, line in enumerate(lines):
     arr = line.split()
 
     word = arr[0]
+    vocab_list.append(word)
     vocab[word] = word_num
 
     for dim in range(embed_dim):
         embeddings[word_num, dim] = float(arr[dim + 1])
 
+pickle.dump(vocab_list, open("vocab_list.p", "wb"))
 pickle.dump(vocab, open("vocab.p", "wb"))
 pickle.dump(embeddings, open("embeddings.p", "wb"))
 

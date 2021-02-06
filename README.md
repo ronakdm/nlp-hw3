@@ -4,11 +4,11 @@ This repo contains code for A3 of Natural Language Processing. The assignment is
 
 ## System Requirements
 
-The code runs on Python 3. Running the `A3_word_embed.ipynb` notebook requires `numpy` and `scikit-learn` as external dependencies. The `A3_sentiment_classification.ipynb` should be run in a GPU-accelerated Google Colab environment, which contains its dependencies.
+Both the `A3_word_embed.ipynb` notebook and the `A3_sentiment_classification.ipynb` notebooks should be run in a  Google Colab environment (with the second one GPU-accelerated), which contains its dependencies.
 
 ## Data
 
-The preprocessing code in `preprocess.py` assumes a folder `data/` containing the files `glove.6B.50d.txt`, that is the 50-dimension GloVe word embeddings trained the Wikipedia 2014 and Gigaword 5 datasets. This file is not included in the repo, and can be downloaded [here](https://nlp.stanford.edu/projects/glove/). That being said, preprocessed data already exists in the repo as `embeddings.p`, `vocab.p`, and `vocab_list.p`. These embeddings are used to run `A3_word_embed.ipynb`, which performs information retrieval and analogy completion. 
+The preprocessing code in `preprocess.py` assumes a folder `data/` containing the files `glove.6B.50d.txt`, that is the 50-dimension GloVe word embeddings trained the Wikipedia 2014 and Gigaword 5 datasets. This file is not included in the repo, and can be downloaded [here](https://nlp.stanford.edu/projects/glove/). That being said, preprocessed data already exists in a git repo as `embeddings.p`, `vocab.p`, and `vocab_list.p`, and are downloaded in the notebooks.  
 
 The `A3_sentiment_classification.ipynb` also requires the [IMDB Large Movie Review Dataset](http://ai.stanford.edu/~amaas/data/sentiment/), which is downloaded in the notebook.
 
